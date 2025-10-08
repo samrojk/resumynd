@@ -5,9 +5,14 @@ import { usePuterStore } from "~/lib/puter";
 import { useNavigate } from "react-router";
 import { convertPdfToImage } from "~/lib/pdf2img";
 import { generateUUID } from "~/lib/utils";
-import { prepareInstructions } from "../constants";
+import { prepareInstructions } from "../../constants";
 
-const upload = () => {
+export const meta = () => [
+  { title: "Upload Resume" },
+  { name: "description", content: "You can upload your resume here!" },
+];
+
+const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
@@ -156,5 +161,4 @@ const upload = () => {
     </main>
   );
 };
-
-export default upload;
+export default Upload;
