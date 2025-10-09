@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
 export const meta = () => [
-  { title: "Resumind | Data" },
+  { title: "Resumynd | Data" },
   { name: "description", content: "You can wipe all your data!" },
 ];
 
